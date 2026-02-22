@@ -14,24 +14,4 @@ db.version(1).stores({
     defectuosos: '++id, compra, producto, cantidad, valorUnitario, valorTotal'
 });
 
-// Helper functions for database transactions
-db.on('populate', async () => {
-    console.log("Inicializando la base de datos con datos semilla...");
-    try {
-        const response = await fetch('assets/seed.json');
-        if (!response.ok) throw new Error("No se pudo cargar seed.json");
-
-        const data = await response.json();
-
-        for (const tableName of Object.keys(data)) {
-            if (db[tableName] && data[tableName].length > 0) {
-                await db[tableName].bulkAdd(data[tableName]);
-            }
-        }
-        console.log("Datos semilla cargados correctamente.");
-    } catch (err) {
-        console.error("Error cargando seed.json:", err);
-    }
-});
-
 window.db = db;

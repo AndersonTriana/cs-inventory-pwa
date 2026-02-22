@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 100 100" opacity="0.1">
+  <g stroke="#ffffff" fill="none" stroke-width="0.5">
+    <path d="M50 10 Q60 5, 70 15 T80 30 Q70 40, 50 25 Q30 40, 20 30 T30 15 Q40 5, 50 10 Z" />
+    <circle cx="50" cy="50" r="15" />
+    <path d="M50 35 L50 65 M35 50 L65 50 M40 40 L60 60 M40 60 L60 40" stroke-width="0.3" />
+    <path d="M10 50 Q20 40, 30 50 T10 50" />
+    <path d="M90 50 Q80 40, 70 50 T90 50" />
+    <path d="M50 90 Q40 80, 50 70 T50 90" />
+  </g>
+</svg>

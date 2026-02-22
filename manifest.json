@@ -1,0 +1,17 @@
+{
+  "name": "CS Tattoo Inventory",
+  "short_name": "CS Inventory",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050505",
+  "theme_color": "#c41e3a",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "assets/images/icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

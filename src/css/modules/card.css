@@ -1,0 +1,67 @@
+/* Glassmorphism Cards */
+.card {
+    background: var(--color-bg-glass);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--color-border-glass);
+    border-radius: var(--radius-lg);
+    padding: var(--space-md);
+    box-shadow: var(--shadow-card);
+    transition: border-color var(--transition-fast);
+}
+
+.card:hover {
+    border-color: var(--color-border-glass-light);
+}
+
+.card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-sm);
+    border-bottom: 1px solid var(--color-border-glass);
+    padding-bottom: var(--space-sm);
+}
+
+.card__title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.card__body {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+/* Stats variant */
+.card--stat {
+    text-align: center;
+    padding: var(--space-lg) var(--space-md);
+}
+
+.card--stat .card__title {
+    color: var(--color-text-muted);
+    font-family: var(--font-family-body);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border: none;
+    margin-bottom: var(--space-xs);
+}
+
+.card--stat .stat-value {
+    font-size: 1.75rem;
+    font-weight: 700;
+    font-family: var(--font-family-title);
+    color: var(--color-accent-gold);
+}
+
+.stat-value--red {
+    color: var(--color-accent-red);
+}
+
+.stat-value--green {
+    color: var(--color-success);
+}

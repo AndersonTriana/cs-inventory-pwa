@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>CS Inventory</title>
+
+  <meta name="theme-color" content="#c41e3a">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/svg+xml" href="assets/images/icon.svg">
+  <link rel="apple-touch-icon" href="assets/images/icon.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Rye&display=swap"
+    rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="src/css/reset.css">
+  <link rel="stylesheet" href="src/css/variables.css">
+  <link rel="stylesheet" href="src/css/base.css">
+  <link rel="stylesheet" href="src/css/modules/layout.css">
+  <link rel="stylesheet" href="src/css/modules/card.css">
+  <link rel="stylesheet" href="src/css/modules/form.css">
+  <link rel="stylesheet" href="src/css/modules/nav.css">
+  <link rel="stylesheet" href="src/css/modules/table.css">
+  <link rel="stylesheet" href="src/css/modules/modal.css">
+  <link rel="stylesheet" href="src/css/modules/dashboard.css">
+  <!-- Vendor libraries -->
+  <script src="https://unpkg.com/dexie@3.2.4/dist/dexie.js"></script>
+  <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+
+  <!-- Store & Utils -->
+  <script src="src/js/utils/helpers.js" defer></script>
+  <script src="src/js/utils/db.js" defer></script>
+  <script src="src/js/utils/import-export.js" defer></script>
+  <script src="src/js/stores/app-store.js" defer></script>
+  <!-- Modules -->
+  <script src="src/js/modules/inventario.js" defer></script>
+  <script src="src/js/modules/ventas.js" defer></script>
+  <script src="src/js/modules/compras.js" defer></script>
+  <script src="src/js/modules/otros.js" defer></script>
+
+  <!-- Alpine.js -->
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body x-data="appStore" x-init="initApp()">
+
+  <div class="bg-overlay"></div>
+
+  <div class="app-container">
+    <!-- Header -->
+    <header class="app-header">
+      <h1 class="app-header__title" x-text="getPageTitle()">CS Inventory</h1>
+      <button class="btn-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+          <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+        </svg>
+      </button>
+    </header>
+
+    <!-- Main Content -->
+    <main class="app-content">
+      <!-- We will mount our views here -->
+      <template x-if="currentPage === 'dashboard'">
+        <div class="u-flex-column u-gap-md">
+          <div class="grid-2-cols">
+            <div class="card card--stat">
+              <h3 class="card__title">Valor Total</h3>
+              <div class="stat-value" x-text="formatCurrency(totalInventoryValue)"></div>
+            </div>
+            <div class="card card--stat">
+              <h3 class="card__title">Deuda Total</h3>
+              <div class="stat-value stat-value--red" x-text="formatCurrency(totalOwed)"></div>
+            </div>
+          </div>
+          <template x-if="false">
+            <!-- Removed user alert -->
+          </template>
+          <div class="action-grid">
+            <a href="#" @click.prevent="openModal('ventas')" class="action-card">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <line x1="12" y1="1" x2="12" y2="23"></line>
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              </svg>
+              <span>Nueva Venta</span>
+            </a>
+            <a href="#" @click.prevent="openModal('compras')" class="action-card">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                <circle cx="9" cy="21" r="1"></circle>
+                <circle cx="20" cy="21" r="1"></circle>
+              </svg>
+              <span>Nueva Compra</span>
+            </a>
+            <a href="#" @click.prevent="setPage('inventario')" class="action-card">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <line x1="8" y1="6" x2="21" y2="6"></line>
+                <line x1="8" y1="12" x2="21" y2="12"></line>
+                <line x1="8" y1="18" x2="21" y2="18"></line>
+                <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                <line x1="3" y1="18" x2="3.01" y2="18"></line>
+              </svg>
+              <span>Ver Inventario</span>
+            </a>
+            <a href="#" @click.prevent="setPage('deben')" class="action-card">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+              <span>Lista Deudores</span>
+            </a>
+          </div>
+        </div>
+      </template>
+
+      <template x-if="currentPage === 'inventario'">
+        <div x-data="inventarioStore" x-init="loadInventario()" class="u-flex-column u-gap-md">
+          <div class="search-bar">
+            <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" class="form-input" x-model="searchQuery" placeholder="Buscar producto...">
+          </div>
+          <div class="table-container">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Producto</th>
+                  <th>Cant</th>
+                  <th>Venta</th>
+                  <th>Acción</th>
+                </tr>
+              </thead>
+              <tbody>
+                <template x-for="item in filteredStock" :key="item.id">
+                  <tr>
+                    <td x-text="item.nombre || '-'"></td>
+                    <td x-text="item.cantidad"
+                      :class="{'text-accent': parseInt(item.cantidad) <= 2, 'text-success': parseInt(item.cantidad) > 2}">
+                    </td>
+                    <td class="cell-currency" x-text="formatCurrency(item.valorVenta)"></td>
+                    <td>
+                      <div class="u-flex u-gap-xs">
+                        <button class="btn-icon btn-icon--gold" @click="openModal('editPrice', item)"
+                          title="Editar Precio">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                            <path d="M18.5 2.5a2.121 2.121 0 1 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                          </svg>
+                        </button>
+                        <button class="btn-icon btn-icon--danger" @click="openModal('reportDefective', item)"
+                          title="Reportar Defectuoso">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2">
+                            </polygon>
+                            <line x1="15" y1="9" x2="9" y2="15"></line>
+                            <line x1="9" y1="9" x2="15" y2="15"></line>
+                          </svg>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                </template>
+                <tr x-show="filteredStock.length === 0">
+                  <td colspan="4" class="u-text-center text-muted">No se encontraron productos</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </template>
+
+      <template x-if="currentPage === 'ventas'">
+        <div class="u-flex-column u-gap-md u-text-center">
+          <h2 class="text-gold">Módulo de Ventas</h2>
+          <p class="text-muted u-mb-md">Las ventas ahora se realizan a través del modal.</p>
+          <div class="u-flex u-justify-center">
+            <button class="btn btn-primary" @click="openModal('ventas')">🛒 Iniciar Nueva Venta</button>
+          </div>
+        </div>
+      </template>
+
+      <template x-if="currentPage === 'compras'">
+        <div class="u-flex-column u-gap-md u-text-center">
+          <h2 class="text-gold">Compras</h2>
+          <p class="text-muted">Las compras ahora se realizan a través del modal de Nueva Compra.</p>
+          <button class="btn btn-primary" @click="openModal('compras')">📦 Registrar Nueva Compra</button>
+        </div>
+      </template>
+
+      <template x-if="currentPage === 'deben'">
+        <div x-data="debenStore" x-init="loadData()" class="u-flex-column u-gap-md">
+          <div class="card card--stat u-mb-md">
+            <h3 class="card__title">Total a Cobrar</h3>
+            <div class="stat-value stat-value--red" x-text="formatCurrency(totalDeuda)"></div>
+          </div>
+          <div class="table-container">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Cliente</th>
+                  <th>Deuda</th>
+                </tr>
+              </thead>
+              <tbody>
+                <template x-for="(d, i) in deudores" :key="i">
+                  <tr>
+                    <td x-text="d.nombre"></td>
+                    <td class="cell-currency text-accent" x-text="formatCurrency(d.debe)"></td>
+                  </tr>
+                </template>
+                <tr x-show="deudores.length === 0">
+                  <td colspan="2" class="u-text-center text-muted">Nadie debe</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </template>
+
+      <template x-if="currentPage === 'clientes'">
+        <div x-data="clientesStore" x-init="loadData()" class="u-flex-column u-gap-md">
+          <h2 class="text-gold u-mb-sm">Directorio Clientes</h2>
+          <div class="table-container">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Nombre</th>
+                  <th>Celular</th>
+                </tr>
+              </thead>
+              <tbody>
+                <template x-for="c in clientes" :key="c.id">
+                  <tr>
+                    <td x-text="c.nombre"></td>
+                    <td x-text="c.celular"></td>
+                  </tr>
+                </template>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </template>
+
+      <template x-if="currentPage === 'proveedores'">
+        <div x-data="proveedoresStore" x-init="loadData()" class="u-flex-column u-gap-md">
+          <h2 class="text-gold u-mb-sm">Directorio Proveedores</h2>
+          <div class="table-container">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Nombre</th>
+                  <th>Celular/URL</th>
+                </tr>
+              </thead>
+              <tbody>
+                <template x-for="p in proveedores" :key="p.id">
+                  <tr>
+                    <td x-text="p.nombre"></td>
+                    <td>
+                      <div class="text-muted" x-text="p.celular" style="font-size:0.85em"></div>
+                      <div class="text-success" x-text="p.url" style="font-size:0.85em"></div>
+                    </td>
+                  </tr>
+                </template>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </template>
+
+      <template x-if="currentPage === 'historialVentas'">
+        <div x-data="historialVentasStore" x-init="loadData()" class="u-flex-column u-gap-md">
+          <h2 class="text-gold u-mb-sm">Historial de Ventas</h2>
+          <div class="table-container">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Fecha</th>
+                  <th>Cliente</th>
+                  <th>Productos</th>
+                  <th>Total</th>
+                  <th>Debe</th>
+                </tr>
+              </thead>
+              <tbody>
+                <template x-for="v in ventas" :key="v.id">
+                  <tr>
+                    <td x-text="formatDate(v.fecha)" style="font-size:0.8em"></td>
+                    <td x-text="v.cliente"></td>
+                    <td x-text="v.producto" style="font-size:0.85em"></td>
+                    <td class="cell-currency text-success" x-text="formatCurrency(v.valorTotal)"></td>
+                    <td class="cell-currency text-accent" x-text="formatCurrency(v.debe)"></td>
+                  </tr>
+                </template>
+                <tr x-show="ventas.length === 0">
+                  <td colspan="5" class="u-text-center text-muted">No hay ventas registradas</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </template>
+
+      <template x-if="currentPage === 'historialCompras'">
+        <div x-data="historialComprasStore" x-init="loadData()" class="u-flex-column u-gap-md">
+          <h2 class="text-gold u-mb-sm">Historial de Compras</h2>
+          <div class="table-container">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Fecha</th>
+                  <th>Proveedor</th>
+                  <th>Factura</th>
+                  <th>Total</th>
+                </tr>
+              </thead>
+              <tbody>
+                <template x-for="c in compras" :key="c.id">
+                  <tr>
+                    <td x-text="c.fechaPedido" style="font-size:0.8em"></td>
+                    <td x-text="c.proveedor"></td>
+                    <td x-text="c.numero"></td>
+                    <td class="cell-currency text-success" x-text="formatCurrency(c.valor)"></td>
+                  </tr>
+                </template>
+                <tr x-show="compras.length === 0">
+                  <td colspan="4" class="u-text-center text-muted">No hay compras registradas</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </template>
+
+      <template x-if="currentPage === 'defectuosos'">
+        <div x-data="defectuososStore" x-init="loadData()" class="u-flex-column u-gap-md">
+          <h2 class="text-gold u-mb-sm">Resumen de Defectuosos</h2>
+          <div class="table-container">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Fecha</th>
+                  <th>Producto</th>
+                  <th>Cant</th>
+                  <th>Costo Ej.</th>
+                </tr>
+              </thead>
+              <tbody>
+                <template x-for="d in historico" :key="d.id">
+                  <tr>
+                    <td x-text="formatDate(d.fecha)" style="font-size:0.8em"></td>
+                    <td x-text="d.producto"></td>
+                    <td x-text="d.cantidad" class="text-accent"></td>
+                    <td class="cell-currency text-muted" x-text="formatCurrency(d.valorTotal)"></td>
+                  </tr>
+                </template>
+                <tr x-show="historico.length === 0">
+                  <td colspan="4" class="u-text-center text-muted">No hay registros</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </template>
+
+      <template x-if="currentPage === 'config'">
+        <div x-data="configStore" class="u-flex-column u-gap-md">
+          <div class="card">
+            <h2 class="card__title text-gold u-mb-md">Gestión de Datos (Backup)</h2>
+            <p class="text-muted" style="font-size: 0.9em; margin-bottom: 0.5rem;">
+              Todos los datos están guardados localmente. Si cambias de celular o desinstalas, perderás los datos.
+              Exporta un backup regularmente.
+            </p>
+            <button @click="ImportExport.exportToExcel()" class="btn btn-primary u-mb-md u-full-width">⬇️ Descargar
+              Backup Excel</button>
+            <hr style="border-color: var(--color-border-glass); margin: 1rem 0;">
+            <p class="text-muted" style="font-size: 0.9em; margin-bottom: 0.5rem;">
+              Importar Restaurará la copia de seguridad. <strong>ATENCIÓN: Esto reemplazará los datos actuales.</strong>
+            </p>
+            <label class="btn btn-outline u-full-width"
+              style="display:inline-block; text-align:center; cursor:pointer;">
+              ⬆️ Importar Backup
+              <input type="file" accept=".xlsx" style="display:none;" @change="ImportExport.importFromExcel($event)">
+            </label>
+          </div>
+        </div>
+      </template>
+    </main>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+      <div class="nav-item" :class="{ 'active': currentPage === 'dashboard' }" @click="setPage('dashboard')">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="3" width="7" height="7"></rect>
+          <rect x="14" y="3" width="7" height="7"></rect>
+          <rect x="14" y="14" width="7" height="7"></rect>
+          <rect x="3" y="14" width="7" height="7"></rect>
+        </svg>
+        <span>Inicio</span>
+      </div>
+      <div class="nav-item" :class="{ 'active': currentPage === 'inventario' }" @click="setPage('inventario')">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path
+            d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+          </path>
+          <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+          <line x1="12" y1="22.08" x2="12" y2="12"></line>
+        </svg>
+        <span>Stock</span>
+      </div>
+      <div class="nav-item" :class="{ 'active': activeModal === 'ventas' }" @click.stop="openModal('ventas')">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="12" y1="1" x2="12" y2="23"></line>
+          <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+        </svg>
+        <span>Vender</span>
+      </div>
+      <div class="nav-item" :class="{ 'active': activeModal === 'compras' }" @click.stop="openModal('compras')">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="9" cy="21" r="1"></circle>
+          <circle cx="20" cy="21" r="1"></circle>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+        <span>Comprar</span>
+      </div>
+      <div class="nav-item" :class="{ 'active': showSubmenu }" @click.stop="toggleSubmenu()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+        <span>Más</span>
+      </div>
+    </nav>
+
+    <!-- Submenu -->
+    <template x-if="showSubmenu">
+      <div class="nav-submenu" @click.outside="showSubmenu = false">
+        <a href="#" class="submenu-item" @click.prevent="setPage('historialVentas')">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+            <polyline points="10 9 9 9 8 9"></polyline>
+          </svg>
+          <span class="text-main">His. Ventas</span>
+        </a>
+        <a href="#" class="submenu-item" @click.prevent="setPage('historialCompras')">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span class="text-main">His. Compras</span>
+        </a>
+        <a href="#" class="submenu-item" @click.prevent="setPage('deben')">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+          </svg>
+          <span class="text-main">Deudores</span>
+        </a>
+        <a href="#" class="submenu-item" @click.prevent="setPage('clientes')">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+          <span class="text-main">Clientes</span>
+        </a>
+        <a href="#" class="submenu-item" @click.prevent="setPage('proveedores')">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="12" y1="8" x2="12" y2="16"></line>
+            <line x1="8" y1="12" x2="16" y2="12"></line>
+          </svg>
+          <span class="text-main">Proveedores</span>
+        </a>
+        <a href="#" class="submenu-item" @click.prevent="setPage('defectuosos')">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2">
+            <polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"></polygon>
+            <line x1="15" y1="9" x2="9" y2="15"></line>
+            <line x1="9" y1="9" x2="15" y2="15"></line>
+          </svg>
+          <span class="text-main">Defectuosos</span>
+        </a>
+        <a href="#" class="submenu-item" style="grid-column: span 2;" @click.prevent="setPage('config')">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="3"></circle>
+            <path
+              d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+            </path>
+          </svg>
+          <span class="text-main">Config</span>
+        </a>
+      </div>
+    </template>
+
+    <!-- Global Modal Overlay -->
+    <div class="modal-overlay" :class="{ 'is-active': activeModal !== null }" @click.self="closeModal()">
+
+      <!-- Modal Ventas -->
+      <template x-if="activeModal === 'ventas'">
+        <div class="modal" x-data="ventasStore" x-init="loadFormData()">
+          <header class="modal__header">
+            <h2 class="modal__title">Nueva Venta</h2>
+            <button class="modal__close" @click="closeModal()">✕</button>
+          </header>
+          <div class="modal__body">
+            <div class="form-group">
+              <label class="form-label">1. Agregar Producto</label>
+              <select class="form-select" x-model="formItem.productoId" @change="onProductoChange">
+                <option value="">-- Seleccionar --</option>
+                <template x-for="p in productos" :key="p.id">
+                  <option :value="p.id" x-text="p.nombre + ' (' + p.cantidad + ' disp)'"></option>
+                </template>
+              </select>
+            </div>
+            <div class="grid-2-cols">
+              <div class="form-group">
+                <label class="form-label">Cant</label>
+                <input type="number" class="form-input" x-model="formItem.cantidad" min="1">
+              </div>
+              <div class="form-group">
+                <label class="form-label">P. Venta C/U</label>
+                <input type="number" class="form-input" x-model="formItem.valorVenta">
+              </div>
+            </div>
+            <button type="button" class="btn btn-outline u-mb-md" @click="agregarAlCarrito()">+ Añadir</button>
+
+            <template x-if="carrito.length > 0">
+              <div class="table-container u-mb-md">
+                <table class="table">
+                  <tbody>
+                    <template x-for="(item, index) in carrito" :key="index">
+                      <tr>
+                        <td x-text="item.productoStr" style="font-size:0.85em"></td>
+                        <td x-text="item.cantidad"></td>
+                        <td class="cell-currency text-success" x-text="formatCurrency(item.cantidad * item.valorVenta)">
+                        </td>
+                        <td><button type="button" class="btn-icon btn-icon--danger"
+                            @click="quitarDelCarrito(index)">✕</button></td>
+                      </tr>
+                    </template>
+                  </tbody>
+                </table>
+              </div>
+            </template>
+
+            <hr style="border-color: var(--color-border-glass); margin: var(--space-md) 0;">
+
+            <form @submit.prevent="submitVenta()">
+              <div class="form-group">
+                <label class="form-label">2. Cliente</label>
+                <div class="u-flex u-gap-sm">
+                  <select class="form-select" x-model="clienteId" @change="onClienteChange" style="flex:1">
+                    <option value="">-- Existente --</option>
+                    <template x-for="c in clientes" :key="c.id">
+                      <option :value="c.id" x-text="c.nombre"></option>
+                    </template>
+                  </select>
+                  <input type="text" class="form-input" x-model="clienteStr" placeholder="O Nuevo..." style="flex:1">
+                </div>
+              </div>
+              <div class="grid-2-cols">
+                <div class="form-group">
+                  <label class="form-label">Valor Pagado</label>
+                  <input type="number" class="form-input" x-model="valorPagado">
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Debe</label>
+                  <div class="form-input"
+                    style="background:transparent; border-color:transparent; color: var(--color-accent-red); font-weight:bold"
+                    x-text="formatCurrency(debe)"></div>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary" :disabled="carrito.length === 0">Finalizar (Total: <span
+                  x-text="formatCurrency(valorTotal)"></span>)</button>
+            </form>
+          </div>
+        </div>
+      </template>
+
+      <!-- Modal Compras -->
+      <template x-if="activeModal === 'compras'">
+        <div class="modal" x-data="comprasStore" x-init="loadFormData()">
+          <header class="modal__header">
+            <h2 class="modal__title">Nueva Compra</h2>
+            <button class="modal__close" @click="closeModal()">✕</button>
+          </header>
+          <div class="modal__body">
+            <div class="form-group">
+              <label class="form-label">1. Agregar Producto</label>
+              <div class="u-flex u-gap-sm">
+                <select class="form-select" x-model="formItem.productoId" @change="onProductoChange" style="flex:1">
+                  <option value="">-- Existente --</option>
+                  <template x-for="p in productos" :key="p.id">
+                    <option :value="p.id" x-text="p.nombre"></option>
+                  </template>
+                </select>
+                <input type="text" class="form-input" x-model="formItem.productoStr" placeholder="O Nuevo..."
+                  style="flex:1">
+              </div>
+            </div>
+            <div class="grid-2-cols">
+              <div class="form-group">
+                <label class="form-label">Cant</label>
+                <input type="number" class="form-input" x-model="formItem.cantidad" min="1">
+              </div>
+              <div class="form-group">
+                <label class="form-label">Costo C/U</label>
+                <input type="number" class="form-input" x-model="formItem.valorUnitario">
+              </div>
+            </div>
+            <button type="button" class="btn btn-outline u-mb-md" @click="agregarAlCarrito()">+ Añadir</button>
+
+            <template x-if="carrito.length > 0">
+              <div class="table-container u-mb-md">
+                <table class="table">
+                  <tbody>
+                    <template x-for="(item, index) in carrito" :key="index">
+                      <tr>
+                        <td x-text="item.productoStr" style="font-size:0.85em"></td>
+                        <td x-text="item.cantidad"></td>
+                        <td class="cell-currency text-success"
+                          x-text="formatCurrency(item.cantidad * item.valorUnitario)"></td>
+                        <td><button type="button" class="btn-icon btn-icon--danger"
+                            @click="quitarDelCarrito(index)">✕</button></td>
+                      </tr>
+                    </template>
+                  </tbody>
+                </table>
+              </div>
+            </template>
+
+            <hr style="border-color: var(--color-border-glass); margin: var(--space-md) 0;">
+
+            <form @submit.prevent="submitCompra()">
+              <div class="form-group">
+                <label class="form-label">2. Proveedor</label>
+                <div class="u-flex u-gap-sm">
+                  <select class="form-select" x-model="proveedorId" @change="onProveedorChange" style="flex:1">
+                    <option value="">-- Existente --</option>
+                    <template x-for="p in proveedores" :key="p.id">
+                      <option :value="p.id" x-text="p.nombre"></option>
+                    </template>
+                  </select>
+                  <input type="text" class="form-input" x-model="proveedorStr" placeholder="O Nuevo..." style="flex:1">
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary" :disabled="carrito.length === 0">Guardar Compra (<span
+                  x-text="formatCurrency(valorTotal)"></span>)</button>
+            </form>
+          </div>
+        </div>
+      </template>
+
+      <!-- Modal Edit Price -->
+      <template x-if="activeModal === 'editPrice'">
+        <div class="modal" x-data="inventarioStore" x-init="startEditFromModal($root)">
+          <header class="modal__header">
+            <h2 class="modal__title">Editar Precio</h2>
+            <button class="modal__close" @click="closeModal()">✕</button>
+          </header>
+          <div class="modal__body">
+            <p class="u-mb-md">Ajustar precio de venta para: <strong class="text-gold"
+                x-text="modalData.nombre"></strong></p>
+            <div class="form-group">
+              <label class="form-label">Nuevo Precio de Venta</label>
+              <input type="number" class="form-input" x-model="editPriceValue" autofocus>
+            </div>
+            <button class="btn btn-primary u-full-width" @click="savePrice(modalData.id); closeModal();">Actualizar
+              Precio</button>
+          </div>
+        </div>
+      </template>
+
+      <!-- Modal Report Defective -->
+      <template x-if="activeModal === 'reportDefective'">
+        <div class="modal" x-data="inventarioStore">
+          <header class="modal__header">
+            <h2 class="modal__title">Reportar Defectuoso</h2>
+            <button class="modal__close" @click="closeModal()">✕</button>
+          </header>
+          <div class="modal__body">
+            <p class="u-mb-md">Reportar unidades dañadas de: <strong class="text-accent"
+                x-text="modalData.nombre"></strong></p>
+            <div class="form-group">
+              <label class="form-label">Cantidad Defectuosa</label>
+              <input type="number" class="form-input" x-model="defectQty" min="1" :max="modalData.cantidad">
+              <span class="text-muted" style="font-size:0.8em">Disponibles: <span
+                  x-text="modalData.cantidad"></span></span>
+            </div>
+            <button class="btn btn-outline u-full-width"
+              style="border-color: var(--color-accent-red); color: var(--color-accent-red);"
+              @click="reportarDefectuosoModal(modalData); closeModal();">Confirmar Reporte</button>
+          </div>
+        </div>
+      </template>
+
+    </div>
+  </div>
+
+  <!-- Scripts are loaded externally -->
+</body>
+
+</html>

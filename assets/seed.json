@@ -1,0 +1,1861 @@
+{
+  "productos": [
+    {
+      "nombre": "Bandeja"
+    },
+    {
+      "nombre": "Batería Destilado Manopla"
+    },
+    {
+      "nombre": "Batería Discreta Destilado"
+    },
+    {
+      "nombre": "Blunt Nomad X2"
+    },
+    {
+      "nombre": "Blunt Warp X2 Good Times"
+    },
+    {
+      "nombre": "Blunt Warp X2 Mojito "
+    },
+    {
+      "nombre": "Blunt Warp X3 Mojito"
+    },
+    {
+      "nombre": "Bolsa pequeña resellable Alien"
+    },
+    {
+      "nombre": "Bong de goma AK-47"
+    },
+    {
+      "nombre": "Capsula con Miel HHC"
+    },
+    {
+      "nombre": "Capsula con Miel Thc-o"
+    },
+    {
+      "nombre": "Capsula destilado vacía"
+    },
+    {
+      "nombre": "CD Circulo Vicioso"
+    },
+    {
+      "nombre": "Destilado Cookies 2.5ML"
+    },
+    {
+      "nombre": "Destilado desechable Planet 51"
+    },
+    {
+      "nombre": "Filtros de sabores Mod Pod"
+    },
+    {
+      "nombre": "Flamingo azul x50"
+    },
+    {
+      "nombre": "Flamingo azul x50"
+    },
+    {
+      "nombre": "Miel HHC"
+    },
+    {
+      "nombre": "Miel Thc-O"
+    },
+    {
+      "nombre": "Miel Thc-O + HHC"
+    },
+    {
+      "nombre": "OCB Cáñamo Orgánico 1/4"
+    },
+    {
+      "nombre": "OCB Ultra Fino"
+    },
+    {
+      "nombre": "Pala Cuchara"
+    },
+    {
+      "nombre": "Pipa Boquilla P"
+    },
+    {
+      "nombre": "Pipa Goma"
+    },
+    {
+      "nombre": "Porta Cadela"
+    },
+    {
+      "nombre": "Rascador 4 Pisos"
+    },
+    {
+      "nombre": "Rascador automático"
+    },
+    {
+      "nombre": "Soplete Floppi Mediano"
+    },
+    {
+      "nombre": "Vaper 6ix9ine"
+    },
+    {
+      "nombre": "Vaper Anuel"
+    },
+    {
+      "nombre": "Vaper Baton GO"
+    },
+    {
+      "nombre": "Vaper Desechable Abood 5000PUFF"
+    },
+    {
+      "nombre": "Vaper Desechable Cheevape 6000PUFF"
+    },
+    {
+      "nombre": "Vaper Desechable Toha 10000PUFF"
+    },
+    {
+      "nombre": "Vaper Matrix"
+    },
+    {
+      "nombre": "Vaper Novo"
+    },
+    {
+      "nombre": "Vaper Q"
+    },
+    {
+      "nombre": "Vaper REBEL PRO 5000PUFF"
+    },
+    {
+      "nombre": "Vick Inhalador"
+    },
+    {
+      "nombre": "Vaper AirFuze"
+    }
+  ],
+  "clientes": [
+    {
+      "nombre": "Ander ",
+      "celular": null,
+      "debe": null
+    },
+    {
+      "nombre": "Nico ",
+      "celular": null,
+      "debe": null
+    },
+    {
+      "nombre": "Juandi Marin ",
+      "celular": null,
+      "debe": null
+    },
+    {
+      "nombre": "Pampara ",
+      "celular": null,
+      "debe": null
+    },
+    {
+      "nombre": "Ander Veracruz ",
+      "celular": null,
+      "debe": null
+    },
+    {
+      "nombre": "Nano ",
+      "celular": null,
+      "debe": null
+    },
+    {
+      "nombre": "Samuel ",
+      "celular": null,
+      "debe": null
+    },
+    {
+      "nombre": "Jero Arbeláez",
+      "celular": null,
+      "debe": null
+    },
+    {
+      "nombre": "Alejo Solarte ",
+      "celular": null,
+      "debe": null
+    },
+    {
+      "nombre": "Ruso ",
+      "celular": null,
+      "debe": null
+    },
+    {
+      "nombre": "Joan Boxeador ",
+      "celular": null,
+      "debe": null
+    },
+    {
+      "nombre": "Jhon Cuchilla ",
+      "celular": null,
+      "debe": null
+    },
+    {
+      "nombre": "Federico ",
+      "celular": null,
+      "debe": null
+    },
+    {
+      "nombre": "Tomas Parr ",
+      "celular": null,
+      "debe": null
+    },
+    {
+      "nombre": "Yanka ",
+      "celular": null,
+      "debe": null
+    },
+    {
+      "nombre": "Pablo ",
+      "celular": null,
+      "debe": null
+    },
+    {
+      "nombre": "Sebas Picado ",
+      "celular": null,
+      "debe": null
+    },
+    {
+      "nombre": "Sara ",
+      "celular": null,
+      "debe": null
+    },
+    {
+      "nombre": "Juan Botero ",
+      "celular": null,
+      "debe": null
+    },
+    {
+      "nombre": "Andrés Café  ",
+      "celular": null,
+      "debe": null
+    },
+    {
+      "nombre": "Andresito",
+      "celular": null,
+      "debe": null
+    },
+    {
+      "nombre": "Daniel vecino ",
+      "celular": null,
+      "debe": null
+    },
+    {
+      "nombre": "Xavier ",
+      "celular": null,
+      "debe": null
+    },
+    {
+      "nombre": "Bray Vecino",
+      "celular": null,
+      "debe": null
+    },
+    {
+      "nombre": "Híbrido ",
+      "celular": null,
+      "debe": null
+    },
+    {
+      "nombre": "Diego Unitrans",
+      "celular": null,
+      "debe": null
+    },
+    {
+      "nombre": "Michael Amigo Loco ",
+      "celular": null,
+      "debe": null
+    },
+    {
+      "nombre": "Esteban Cordoba ",
+      "celular": null,
+      "debe": null
+    },
+    {
+      "nombre": "Flecher ",
+      "celular": null,
+      "debe": null
+    },
+    {
+      "nombre": "Geraldine Segura ",
+      "celular": null,
+      "debe": null
+    },
+    {
+      "nombre": "Juan Gonzales ",
+      "celular": null,
+      "debe": null
+    },
+    {
+      "nombre": "Uriel ",
+      "celular": null,
+      "debe": null
+    },
+    {
+      "nombre": "Jenny Curva",
+      "celular": null,
+      "debe": null
+    },
+    {
+      "nombre": "Gringo ",
+      "celular": null,
+      "debe": null
+    },
+    {
+      "nombre": "Loco ",
+      "celular": null,
+      "debe": null
+    },
+    {
+      "nombre": "Nano",
+      "celular": null,
+      "debe": null
+    },
+    {
+      "nombre": "Ruso",
+      "celular": null,
+      "debe": null
+    },
+    {
+      "nombre": "Novio Sofia",
+      "celular": null,
+      "debe": null
+    },
+    {
+      "nombre": "Santi Arias",
+      "celular": null,
+      "debe": null
+    },
+    {
+      "nombre": "Santi Perez ",
+      "celular": null,
+      "debe": null
+    },
+    {
+      "nombre": "Tomas Parr",
+      "celular": null,
+      "debe": null
+    },
+    {
+      "nombre": "Vivi ",
+      "celular": null,
+      "debe": null
+    },
+    {
+      "nombre": "Esteban Cordoba",
+      "celular": null,
+      "debe": null
+    },
+    {
+      "nombre": "Pipe Morales",
+      "celular": null,
+      "debe": null
+    },
+    {
+      "nombre": "Dario Linda",
+      "celular": null,
+      "debe": null
+    },
+    {
+      "nombre": "Nico",
+      "celular": null,
+      "debe": null
+    },
+    {
+      "nombre": "Tilin",
+      "celular": null,
+      "debe": null
+    },
+    {
+      "nombre": "Sebastian Guzman",
+      "celular": null,
+      "debe": null
+    },
+    {
+      "nombre": "Melchor",
+      "celular": null,
+      "debe": null
+    },
+    {
+      "nombre": "Jhonatan Legon",
+      "celular": null,
+      "debe": null
+    },
+    {
+      "nombre": "Andres Stiven",
+      "celular": null,
+      "debe": null
+    },
+    {
+      "nombre": "Dairo",
+      "celular": null,
+      "debe": null
+    },
+    {
+      "nombre": "Emmanuel",
+      "celular": null,
+      "debe": null
+    },
+    {
+      "nombre": "Leandro",
+      "celular": null,
+      "debe": null
+    },
+    {
+      "nombre": "Junior",
+      "celular": null,
+      "debe": null
+    },
+    {
+      "nombre": "Pipe Verruga",
+      "celular": null,
+      "debe": null
+    }
+  ],
+  "proveedores": [
+    {
+      "nombre": "Paradise Smoking Grow Shop",
+      "celular": 3186437226,
+      "url": "paradisesmokingshop.com.co",
+      "etiquetas": null
+    },
+    {
+      "nombre": "Aleko",
+      "celular": null,
+      "url": "aleko.com.co",
+      "etiquetas": null
+    },
+    {
+      "nombre": "Jeison Destilados",
+      "celular": null,
+      "url": null,
+      "etiquetas": null
+    },
+    {
+      "nombre": "Merch Granuja",
+      "celular": null,
+      "url": "granuja.co",
+      "etiquetas": null
+    },
+    {
+      "nombre": "Hyde Vapers",
+      "celular": null,
+      "url": null,
+      "etiquetas": null
+    },
+    {
+      "nombre": "Vapers Samuel",
+      "celular": null,
+      "url": null,
+      "etiquetas": null
+    },
+    {
+      "nombre": "Tiendavape Colombia",
+      "celular": null,
+      "url": null,
+      "etiquetas": null
+    },
+    {
+      "nombre": "Los Petetes",
+      "celular": null,
+      "url": null,
+      "etiquetas": null
+    }
+  ],
+  "inventario": [
+    {
+      "nombre": "Vaper Snoopy x 15000",
+      "cantidad": 3,
+      "valorVenta": 25000,
+      "valorTotal": 75000
+    },
+    {
+      "nombre": "Vaper Movement x18000",
+      "cantidad": 3,
+      "valorVenta": 30000,
+      "valorTotal": 90000
+    },
+    {
+      "nombre": "Vaper Lost Mary x5000",
+      "cantidad": 2,
+      "valorVenta": 15000,
+      "valorTotal": 30000
+    },
+    {
+      "nombre": "Vaper Spaceman x18000",
+      "cantidad": 2,
+      "valorVenta": 30000,
+      "valorTotal": 60000
+    },
+    {
+      "nombre": "Vaper Matrix x12000",
+      "cantidad": 2,
+      "valorVenta": 25000,
+      "valorTotal": 50000
+    },
+    {
+      "nombre": "Vaper MintTopia x9000",
+      "cantidad": 1,
+      "valorVenta": 22000,
+      "valorTotal": 22000
+    },
+    {
+      "nombre": "Pipa de Vidro Encauchetada Grande",
+      "cantidad": 3,
+      "valorVenta": 8000,
+      "valorTotal": 24000
+    },
+    {
+      "nombre": "Pipa de Vidro Encauchetada Pequeña",
+      "cantidad": 5,
+      "valorVenta": 6000,
+      "valorTotal": 30000
+    },
+    {
+      "nombre": "Hemp Warp",
+      "cantidad": 12,
+      "valorVenta": 4000,
+      "valorTotal": 48000
+    },
+    {
+      "nombre": "Bandeja pequeña",
+      "cantidad": 4,
+      "valorVenta": 15000,
+      "valorTotal": 60000
+    },
+    {
+      "nombre": "Calcomanías pequeñas",
+      "cantidad": 30,
+      "valorVenta": 500,
+      "valorTotal": 15000
+    },
+    {
+      "nombre": "Palas ",
+      "cantidad": 4,
+      "valorVenta": 7000,
+      "valorTotal": 28000
+    },
+    {
+      "nombre": "Gafas tipo Cartier",
+      "cantidad": 2,
+      "valorVenta": 35000,
+      "valorTotal": 70000
+    },
+    {
+      "nombre": "Cueros Nicon",
+      "cantidad": 4,
+      "valorVenta": 5000,
+      "valorTotal": 20000
+    },
+    {
+      "nombre": "Filtros Rolling Circus",
+      "cantidad": 6,
+      "valorVenta": 5000,
+      "valorTotal": 30000
+    },
+    {
+      "nombre": "Grinder 1 Piso",
+      "cantidad": 2,
+      "valorVenta": 5000,
+      "valorTotal": 10000
+    },
+    {
+      "nombre": "Grinder 2 Pisos",
+      "cantidad": 2,
+      "valorVenta": 8000,
+      "valorTotal": 16000
+    },
+    {
+      "nombre": "Grinder pequeña 3 pisos",
+      "cantidad": 2,
+      "valorVenta": 12000,
+      "valorTotal": 24000
+    },
+    {
+      "nombre": "Grinder Metálicas Grande",
+      "cantidad": 2,
+      "valorVenta": 40000,
+      "valorTotal": 80000
+    },
+    {
+      "nombre": "Pipa Popelle",
+      "cantidad": 6,
+      "valorVenta": 2500,
+      "valorTotal": 15000
+    },
+    {
+      "nombre": "Pipa Vidrio Pequeña",
+      "cantidad": 3,
+      "valorVenta": 6000,
+      "valorTotal": 18000
+    },
+    {
+      "nombre": "Pipa Vidrio Encauchetada Grande",
+      "cantidad": 3,
+      "valorVenta": 8000,
+      "valorTotal": 24000
+    },
+    {
+      "nombre": "Pipa Completamente de Vidrio",
+      "cantidad": 4,
+      "valorVenta": 5000,
+      "valorTotal": 20000
+    },
+    {
+      "nombre": "Vaper Lost Mary x5000",
+      "cantidad": 2,
+      "valorVenta": 15000,
+      "valorTotal": 30000
+    }
+  ],
+  "compras": [
+    {
+      "numero": "Compra #2",
+      "proveedor": "Temu",
+      "valor": 25234,
+      "fechaPedido": "2025-08-08T00:00:00",
+      "fechaLlegada": "2025-08-22T00:00:00",
+      "descripcion": null,
+      "comentarios": null,
+      "factura": null
+    },
+    {
+      "numero": "Compra #1",
+      "proveedor": "Los Petetes",
+      "valor": 204500,
+      "fechaPedido": "2025-08-20T00:00:00",
+      "fechaLlegada": "2025-08-20T00:00:00",
+      "descripcion": null,
+      "comentarios": null,
+      "factura": null
+    }
+  ],
+  "productosComprados": [
+    {
+      "compraId": "Compra #1 ",
+      "nombre": "Vaper Snoopy x 15000",
+      "cantidad": 3,
+      "valorUnitario": 13000,
+      "valorTotal": 39000
+    },
+    {
+      "compraId": "Compra #1 ",
+      "nombre": "Vaper Movement x18000",
+      "cantidad": 3,
+      "valorUnitario": 12000,
+      "valorTotal": 36000
+    },
+    {
+      "compraId": "Compra #1 ",
+      "nombre": "Vaper Lost Mary x5000",
+      "cantidad": 4,
+      "valorUnitario": 7000,
+      "valorTotal": 28000
+    },
+    {
+      "compraId": "Compra #1 ",
+      "nombre": "Vaper Spaceman x18000",
+      "cantidad": 2,
+      "valorUnitario": 12000,
+      "valorTotal": 24000
+    },
+    {
+      "compraId": "Compra #1 ",
+      "nombre": "Vaper Matrix x12000",
+      "cantidad": 2,
+      "valorUnitario": 10000,
+      "valorTotal": 20000
+    },
+    {
+      "compraId": "Compra #1 ",
+      "nombre": "Vaper MintTopia x9000",
+      "cantidad": 1,
+      "valorUnitario": 8000,
+      "valorTotal": 8000
+    },
+    {
+      "compraId": "Compra #1 ",
+      "nombre": "Pipa de Vidro Encauchetada Grande",
+      "cantidad": 3,
+      "valorUnitario": 4000,
+      "valorTotal": 12000
+    },
+    {
+      "compraId": "Compra #1 ",
+      "nombre": "Pipa de Vidro Encauchetada Pequeña",
+      "cantidad": 5,
+      "valorUnitario": 3000,
+      "valorTotal": 15000
+    },
+    {
+      "compraId": "Compra #1 ",
+      "nombre": "Hemp Warp",
+      "cantidad": 1,
+      "valorUnitario": 22700,
+      "valorTotal": 22700
+    },
+    {
+      "compraId": "Compra #2",
+      "nombre": "Bandeja pequeña",
+      "cantidad": 4,
+      "valorUnitario": 6000,
+      "valorTotal": 24000
+    },
+    {
+      "compraId": "Compra #2",
+      "nombre": "Calcomanías pequeñas",
+      "cantidad": 30,
+      "valorUnitario": 134,
+      "valorTotal": 4020
+    },
+    {
+      "compraId": "Compra #2",
+      "nombre": "Palas ",
+      "cantidad": 4,
+      "valorUnitario": 1600,
+      "valorTotal": 6400
+    },
+    {
+      "compraId": "Compra #2",
+      "nombre": "Gafas tipo Cartier",
+      "cantidad": 2,
+      "valorUnitario": 12000,
+      "valorTotal": 24000
+    },
+    {
+      "compraId": "Compra #2",
+      "nombre": "Cueros Nicon",
+      "cantidad": 4,
+      "valorUnitario": 3200,
+      "valorTotal": 12800
+    },
+    {
+      "compraId": "Compra #2",
+      "nombre": "Filtros Rolling Circus",
+      "cantidad": 6,
+      "valorUnitario": 2300,
+      "valorTotal": 13800
+    },
+    {
+      "compraId": "Compra #3",
+      "nombre": "Grinder 1 Piso",
+      "cantidad": 2,
+      "valorUnitario": 2600,
+      "valorTotal": 5200
+    },
+    {
+      "compraId": "Compra #3",
+      "nombre": "Grinder 2 Pisos",
+      "cantidad": 2,
+      "valorUnitario": 4000,
+      "valorTotal": 8000
+    },
+    {
+      "compraId": "Compra #3",
+      "nombre": "Grinder pequeña 3 pisos",
+      "cantidad": 2,
+      "valorUnitario": 8000,
+      "valorTotal": 16000
+    },
+    {
+      "compraId": "Compra #3",
+      "nombre": "Grinder Metálicas Grande",
+      "cantidad": 2,
+      "valorUnitario": 14000,
+      "valorTotal": 28000
+    },
+    {
+      "compraId": "Compra #3",
+      "nombre": "Pipa Popelle",
+      "cantidad": 6,
+      "valorUnitario": 1000,
+      "valorTotal": 6000
+    },
+    {
+      "compraId": "Compra #3",
+      "nombre": "Pipa Vidrio Pequeña",
+      "cantidad": 3,
+      "valorUnitario": 3000,
+      "valorTotal": 9000
+    },
+    {
+      "compraId": "Compra #3",
+      "nombre": "Pipa Vidrio Encauchetada Grande",
+      "cantidad": 3,
+      "valorUnitario": 4000,
+      "valorTotal": 12000
+    },
+    {
+      "compraId": "Compra #3",
+      "nombre": "Pipa Completamente de Vidrio",
+      "cantidad": 4,
+      "valorUnitario": 3000,
+      "valorTotal": 12000
+    },
+    {
+      "compraId": "Compra #3",
+      "nombre": "Vaper Lost Mary x5000",
+      "cantidad": 2,
+      "valorUnitario": 6500,
+      "valorTotal": 13000
+    },
+    {
+      "compraId": "Compra #4",
+      "nombre": "Vaper Lost Mary x5000",
+      "cantidad": 3,
+      "valorUnitario": 7000,
+      "valorTotal": 21000
+    },
+    {
+      "compraId": "Compra #4",
+      "nombre": "Vaper Snoopy x 15000",
+      "cantidad": 4,
+      "valorUnitario": 12000,
+      "valorTotal": 48000
+    },
+    {
+      "compraId": "Compra #4",
+      "nombre": "Vaper Spaceman x18000",
+      "cantidad": 2,
+      "valorUnitario": 12500,
+      "valorTotal": 25000
+    },
+    {
+      "compraId": "Compra #5",
+      "nombre": "Vaper Lost Mary x5000",
+      "cantidad": 5,
+      "valorUnitario": 7000,
+      "valorTotal": 35000
+    },
+    {
+      "compraId": "Compra #5",
+      "nombre": "Vaper Matrix x12000",
+      "cantidad": 3,
+      "valorUnitario": 11000,
+      "valorTotal": 33000
+    },
+    {
+      "compraId": "Compra #5",
+      "nombre": "Vaper AriFuze",
+      "cantidad": 3,
+      "valorUnitario": 18500,
+      "valorTotal": 55500
+    },
+    {
+      "compraId": "Compra #5",
+      "nombre": "Palas Color Antigüo",
+      "cantidad": 4,
+      "valorUnitario": 2500,
+      "valorTotal": 10000
+    },
+    {
+      "compraId": "Compra #5",
+      "nombre": "Palas Color",
+      "cantidad": 4,
+      "valorUnitario": 3000,
+      "valorTotal": 12000
+    },
+    {
+      "compraId": "Compra #5",
+      "nombre": "Pipa de Vidro Encauchetada Pequeña",
+      "cantidad": 4,
+      "valorUnitario": 3000,
+      "valorTotal": 12000
+    }
+  ],
+  "ventas": [
+    {
+      "producto": "Tabaco X2 Good Times ",
+      "cliente": "Travis",
+      "cantidad": 1,
+      "valorPagado": 5000,
+      "valorVenta": 5000,
+      "valorTotal": 5000,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Cueros",
+      "cliente": "Breiner",
+      "cantidad": 1,
+      "valorPagado": 0,
+      "valorVenta": 4000,
+      "valorTotal": 4000,
+      "debe": 4000,
+      "comentarios": null
+    },
+    {
+      "producto": "Cueros OCB",
+      "cliente": "Andres Cafe",
+      "cantidad": 1,
+      "valorPagado": 4000,
+      "valorVenta": 4000,
+      "valorTotal": 4000,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Vaper AriFuze",
+      "cliente": "Daniel Dah",
+      "cantidad": 1,
+      "valorPagado": 45000,
+      "valorVenta": 45000,
+      "valorTotal": 45000,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Vaper Orion",
+      "cliente": "Alejo Solarte",
+      "cantidad": 1,
+      "valorPagado": 30000,
+      "valorVenta": 30000,
+      "valorTotal": 30000,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Vaper AriFuze",
+      "cliente": "Alejo Solarte",
+      "cantidad": 1,
+      "valorPagado": 45000,
+      "valorVenta": 45000,
+      "valorTotal": 45000,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Vaper Snoopy",
+      "cliente": "Chamo",
+      "cantidad": 1,
+      "valorPagado": 25000,
+      "valorVenta": 25000,
+      "valorTotal": 25000,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Compra #2",
+      "cliente": null,
+      "cantidad": 1,
+      "valorPagado": -204500,
+      "valorVenta": null,
+      "valorTotal": 0,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Pipa grande",
+      "cliente": "Breiner",
+      "cantidad": 2,
+      "valorPagado": 5000,
+      "valorVenta": 5000,
+      "valorTotal": 10000,
+      "debe": 5000,
+      "comentarios": null
+    },
+    {
+      "producto": "Filtros",
+      "cliente": "Breiner",
+      "cantidad": 1,
+      "valorPagado": 0,
+      "valorVenta": 4000,
+      "valorTotal": 4000,
+      "debe": 4000,
+      "comentarios": null
+    },
+    {
+      "producto": "Pala",
+      "cliente": "Breiner",
+      "cantidad": 2,
+      "valorPagado": 0,
+      "valorVenta": 7000,
+      "valorTotal": 14000,
+      "debe": 14000,
+      "comentarios": null
+    },
+    {
+      "producto": "Calcomanías",
+      "cliente": "Tomy",
+      "cantidad": 2,
+      "valorPagado": 1000,
+      "valorVenta": 500,
+      "valorTotal": 1000,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Cueros Nicon (Unidad)",
+      "cliente": null,
+      "cantidad": 12,
+      "valorPagado": 2400,
+      "valorVenta": 200,
+      "valorTotal": 2400,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Pala",
+      "cliente": "Loco",
+      "cantidad": 1,
+      "valorPagado": 7000,
+      "valorVenta": 7000,
+      "valorTotal": 7000,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Grinder Metálica Grande",
+      "cliente": "Jorge",
+      "cantidad": 1,
+      "valorPagado": 40000,
+      "valorVenta": 40000,
+      "valorTotal": 40000,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Vaper Snoopy",
+      "cliente": "Camilo Cuchilla",
+      "cantidad": 1,
+      "valorPagado": 0,
+      "valorVenta": 25000,
+      "valorTotal": 25000,
+      "debe": 25000,
+      "comentarios": null
+    },
+    {
+      "producto": "Vaper Lost Mary x5000",
+      "cliente": "Juandi Cuchilla",
+      "cantidad": 1,
+      "valorPagado": 18000,
+      "valorVenta": 18000,
+      "valorTotal": 18000,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Gafas tipo Cartier",
+      "cliente": "Santy Mora",
+      "cantidad": 1,
+      "valorPagado": 35000,
+      "valorVenta": 35000,
+      "valorTotal": 35000,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Cueros Nicon (Unidad)",
+      "cliente": "Alejandro Matilde",
+      "cantidad": 1,
+      "valorPagado": 200,
+      "valorVenta": 200,
+      "valorTotal": 200,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Vaper Spaceman",
+      "cliente": "Juandi Cuchilla",
+      "cantidad": 1,
+      "valorPagado": 30000,
+      "valorVenta": 30000,
+      "valorTotal": 30000,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Pipa pequeña",
+      "cliente": "Paisa",
+      "cantidad": 1,
+      "valorPagado": 6000,
+      "valorVenta": 6000,
+      "valorTotal": 6000,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Blunt HonneyPuff",
+      "cliente": "Híbrido",
+      "cantidad": 1,
+      "valorPagado": 4000,
+      "valorVenta": 4000,
+      "valorTotal": 4000,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Ingreso Jorge",
+      "cliente": null,
+      "cantidad": 1,
+      "valorPagado": 6000,
+      "valorVenta": 6000,
+      "valorTotal": 6000,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Calcomanías",
+      "cliente": "Dani Menor",
+      "cantidad": 4,
+      "valorPagado": 2000,
+      "valorVenta": 500,
+      "valorTotal": 2000,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Cueros Nicon",
+      "cliente": "Ander Veracruz",
+      "cantidad": 1,
+      "valorPagado": 5000,
+      "valorVenta": 5000,
+      "valorTotal": 5000,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Vaper Hyde",
+      "cliente": "Costeño",
+      "cantidad": 1,
+      "valorPagado": 10000,
+      "valorVenta": 10000,
+      "valorTotal": 10000,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Vaper Movement",
+      "cliente": "Chonchi",
+      "cantidad": 1,
+      "valorPagado": 20000,
+      "valorVenta": 30000,
+      "valorTotal": 30000,
+      "debe": 10000,
+      "comentarios": null
+    },
+    {
+      "producto": "Vaper Hyde",
+      "cliente": "Yanka",
+      "cantidad": 1,
+      "valorPagado": 10000,
+      "valorVenta": 10000,
+      "valorTotal": 10000,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Pala",
+      "cliente": "Juandi Cuchilla",
+      "cantidad": 1,
+      "valorPagado": 7000,
+      "valorVenta": 7000,
+      "valorTotal": 7000,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Cueros Nicon",
+      "cliente": null,
+      "cantidad": 1,
+      "valorPagado": 5000,
+      "valorVenta": 5000,
+      "valorTotal": 5000,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Vaper Snoopy",
+      "cliente": "Tía Vivi",
+      "cantidad": 1,
+      "valorPagado": 10000,
+      "valorVenta": 10000,
+      "valorTotal": 10000,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Vaper AriFuze",
+      "cliente": "Primo Loco",
+      "cantidad": 2,
+      "valorPagado": 90000,
+      "valorVenta": 45000,
+      "valorTotal": 90000,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Grinder 1 Piso",
+      "cliente": "Camilo Unitrans",
+      "cantidad": 1,
+      "valorPagado": 5000,
+      "valorVenta": 5000,
+      "valorTotal": 5000,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Pipa Popeye",
+      "cliente": "Camilo Unitrans",
+      "cantidad": 1,
+      "valorPagado": 5000,
+      "valorVenta": 5000,
+      "valorTotal": 5000,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Pipa grande",
+      "cliente": "Juandi Cuchilla",
+      "cantidad": 1,
+      "valorPagado": 8000,
+      "valorVenta": 8000,
+      "valorTotal": 8000,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Vaper Lost Mary x5000",
+      "cliente": "Sebas Picado",
+      "cantidad": 1,
+      "valorPagado": 15000,
+      "valorVenta": 15000,
+      "valorTotal": 15000,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Compra #3",
+      "cliente": null,
+      "cantidad": null,
+      "valorPagado": -103100,
+      "valorVenta": null,
+      "valorTotal": 0,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Gafas tipo Cartier",
+      "cliente": "Juandi Cuchilla",
+      "cantidad": 1,
+      "valorPagado": 30000,
+      "valorVenta": 30000,
+      "valorTotal": 30000,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Pipa grande",
+      "cliente": "Samuel Veracruz",
+      "cantidad": 1,
+      "valorPagado": 8000,
+      "valorVenta": 8000,
+      "valorTotal": 8000,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Cueros Nicon",
+      "cliente": "Samuel Veracruz",
+      "cantidad": 1,
+      "valorPagado": 5000,
+      "valorVenta": 5000,
+      "valorTotal": 5000,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Grinder Metálica Grande",
+      "cliente": "Jonny",
+      "cantidad": 1,
+      "valorPagado": 40000,
+      "valorVenta": 40000,
+      "valorTotal": 40000,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Blunt HonneyPuff",
+      "cliente": "CS",
+      "cantidad": 1,
+      "valorPagado": 0,
+      "valorVenta": 0,
+      "valorTotal": 0,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Pala",
+      "cliente": "Osman ",
+      "cantidad": 1,
+      "valorPagado": 7000,
+      "valorVenta": 7000,
+      "valorTotal": 7000,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Vaper Spaceman",
+      "cliente": "Camilo Cuchilla",
+      "cantidad": 1,
+      "valorPagado": 25000,
+      "valorVenta": 25000,
+      "valorTotal": 25000,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Grinder 2 pisos",
+      "cliente": "Luis Esquina",
+      "cantidad": 1,
+      "valorPagado": 8000,
+      "valorVenta": 8000,
+      "valorTotal": 8000,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Pipa Popelle",
+      "cliente": "Chonchi",
+      "cantidad": 1,
+      "valorPagado": 3000,
+      "valorVenta": 3000,
+      "valorTotal": 3000,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Vaper Lost Mary x5000",
+      "cliente": "Costeño",
+      "cantidad": 1,
+      "valorPagado": 0,
+      "valorVenta": 15000,
+      "valorTotal": 15000,
+      "debe": 15000,
+      "comentarios": null
+    },
+    {
+      "producto": "Vaper Lost Mary x5000",
+      "cliente": "Jarol",
+      "cantidad": 1,
+      "valorPagado": 20000,
+      "valorVenta": 20000,
+      "valorTotal": 20000,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Compra #4",
+      "cliente": null,
+      "cantidad": null,
+      "valorPagado": -94000,
+      "valorVenta": null,
+      "valorTotal": 0,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Vaper Snoopy",
+      "cliente": null,
+      "cantidad": 1,
+      "valorPagado": 25000,
+      "valorVenta": 25000,
+      "valorTotal": 25000,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Pipa grande",
+      "cliente": "Juandi Cuchilla",
+      "cantidad": 1,
+      "valorPagado": 6000,
+      "valorVenta": 6000,
+      "valorTotal": 6000,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Compra #5",
+      "cliente": null,
+      "cantidad": null,
+      "valorPagado": -158000,
+      "valorVenta": null,
+      "valorTotal": 0,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Vaper AirFuze",
+      "cliente": "Jarol",
+      "cantidad": 1,
+      "valorPagado": 40000,
+      "valorVenta": 40000,
+      "valorTotal": 40000,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Vaper Spaceman",
+      "cliente": "Alejo Universidad",
+      "cantidad": 1,
+      "valorPagado": 30000,
+      "valorVenta": 30000,
+      "valorTotal": 30000,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Pipa grande",
+      "cliente": "Ander Veracruz",
+      "cantidad": 1,
+      "valorPagado": 8000,
+      "valorVenta": 8000,
+      "valorTotal": 8000,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Vaper Matrix",
+      "cliente": "Diego Unitrans",
+      "cantidad": 1,
+      "valorPagado": 25000,
+      "valorVenta": 25000,
+      "valorTotal": 25000,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Vaper Lost Mary x5000",
+      "cliente": "Chonchi",
+      "cantidad": 1,
+      "valorPagado": 20000,
+      "valorVenta": 20000,
+      "valorTotal": 20000,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Vaper Lost Mary x5000",
+      "cliente": "Costeño",
+      "cantidad": 1,
+      "valorPagado": 0,
+      "valorVenta": 16000,
+      "valorTotal": 16000,
+      "debe": 16000,
+      "comentarios": null
+    },
+    {
+      "producto": "Pipa pequeña",
+      "cliente": "Jorge",
+      "cantidad": 1,
+      "valorPagado": 0,
+      "valorVenta": 6000,
+      "valorTotal": 6000,
+      "debe": 6000,
+      "comentarios": null
+    },
+    {
+      "producto": "Vaper Matrix",
+      "cliente": "Tomy",
+      "cantidad": 1,
+      "valorPagado": 25000,
+      "valorVenta": 25000,
+      "valorTotal": 25000,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Calcomanías",
+      "cliente": "Jorge",
+      "cantidad": 4,
+      "valorPagado": 0,
+      "valorVenta": 500,
+      "valorTotal": 2000,
+      "debe": 2000,
+      "comentarios": null
+    },
+    {
+      "producto": "Vaper Lost Mary x5000",
+      "cliente": "Chonchi",
+      "cantidad": 1,
+      "valorPagado": 20000,
+      "valorVenta": 20000,
+      "valorTotal": 20000,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Vaper Lost Mary x5000",
+      "cliente": "#Compra",
+      "cantidad": 5,
+      "valorPagado": -37500,
+      "valorVenta": 7500,
+      "valorTotal": 37500,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Pipa de vidrio con boquilla metálica",
+      "cliente": "Juandi Cuchilla",
+      "cantidad": 1,
+      "valorPagado": 10000,
+      "valorVenta": 10000,
+      "valorTotal": 10000,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Vaper Mintopia",
+      "cliente": "Jarol",
+      "cantidad": 1,
+      "valorPagado": 25000,
+      "valorVenta": 25000,
+      "valorTotal": 25000,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Vaper Lost Mary x5000",
+      "cliente": "Alejo Solarte",
+      "cantidad": 1,
+      "valorPagado": 18000,
+      "valorVenta": 18000,
+      "valorTotal": 18000,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Vaper Lost Mary x5000",
+      "cliente": "Alejo Universidad",
+      "cantidad": 1,
+      "valorPagado": 20000,
+      "valorVenta": 20000,
+      "valorTotal": 20000,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Grinder 1 Piso",
+      "cliente": "Juan Sacatin",
+      "cantidad": 1,
+      "valorPagado": 0,
+      "valorVenta": 6000,
+      "valorTotal": 6000,
+      "debe": 6000,
+      "comentarios": null
+    },
+    {
+      "producto": "Vaper AirFuze",
+      "cliente": "Picoro e Híbrido",
+      "cantidad": 1,
+      "valorPagado": 0,
+      "valorVenta": 40000,
+      "valorTotal": 40000,
+      "debe": 40000,
+      "comentarios": null
+    },
+    {
+      "producto": "Vaper Lost Mary x5000",
+      "cliente": "Yanka",
+      "cantidad": 1,
+      "valorPagado": 15000,
+      "valorVenta": 15000,
+      "valorTotal": 15000,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Pipa de vidrio con boquilla metálica",
+      "cliente": "Canizales",
+      "cantidad": 1,
+      "valorPagado": 10000,
+      "valorVenta": 10000,
+      "valorTotal": 10000,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Vaper Hyde",
+      "cliente": null,
+      "cantidad": 1,
+      "valorPagado": 10000,
+      "valorVenta": 10000,
+      "valorTotal": 10000,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Vaper Lost Mary x5000",
+      "cliente": "Nico",
+      "cantidad": 2,
+      "valorPagado": 32000,
+      "valorVenta": 16000,
+      "valorTotal": 32000,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Vaper Mintopia",
+      "cliente": "Jacobo Morichal",
+      "cantidad": 1,
+      "valorPagado": 25000,
+      "valorVenta": 25000,
+      "valorTotal": 25000,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Vaper Matrix",
+      "cliente": "Sebas Picado",
+      "cantidad": 1,
+      "valorPagado": 0,
+      "valorVenta": 25000,
+      "valorTotal": 25000,
+      "debe": 25000,
+      "comentarios": null
+    },
+    {
+      "producto": "Vaper Matrix",
+      "cliente": "Sergio Villa",
+      "cantidad": 1,
+      "valorPagado": 0,
+      "valorVenta": 25000,
+      "valorTotal": 25000,
+      "debe": 25000,
+      "comentarios": null
+    },
+    {
+      "producto": "Vaper Lost Mary x5000",
+      "cliente": "Camilo Cuchilla",
+      "cantidad": 1,
+      "valorPagado": 16000,
+      "valorVenta": 16000,
+      "valorTotal": 16000,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Bandeja",
+      "cliente": "Breiner",
+      "cantidad": 1,
+      "valorPagado": 15000,
+      "valorVenta": 15000,
+      "valorTotal": 15000,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Vaper Movement",
+      "cliente": "Sergio Villa",
+      "cantidad": 1,
+      "valorPagado": 0,
+      "valorVenta": 30000,
+      "valorTotal": 30000,
+      "debe": 30000,
+      "comentarios": null
+    },
+    {
+      "producto": "Pipa grande",
+      "cliente": "Sombra",
+      "cantidad": 2,
+      "valorPagado": 0,
+      "valorVenta": 8000,
+      "valorTotal": 16000,
+      "debe": 16000,
+      "comentarios": null
+    },
+    {
+      "producto": "Vaper Hyde",
+      "cliente": "Titi Primo Híbrido",
+      "cantidad": 1,
+      "valorPagado": 0,
+      "valorVenta": 15000,
+      "valorTotal": 15000,
+      "debe": 15000,
+      "comentarios": null
+    },
+    {
+      "producto": "Pipa pequeña",
+      "cliente": "Titi Primo Híbrido",
+      "cantidad": 1,
+      "valorPagado": 4000,
+      "valorVenta": 6000,
+      "valorTotal": 6000,
+      "debe": 2000,
+      "comentarios": null
+    },
+    {
+      "producto": "Vaper Lost Mary x5000",
+      "cliente": "Tomy",
+      "cantidad": 1,
+      "valorPagado": 0,
+      "valorVenta": 20000,
+      "valorTotal": 20000,
+      "debe": 20000,
+      "comentarios": null
+    },
+    {
+      "producto": "Vaper Lost Mary x5000",
+      "cliente": "Alejo Universidad",
+      "cantidad": 1,
+      "valorPagado": 16000,
+      "valorVenta": 16000,
+      "valorTotal": 16000,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Vaper Lost Mary x5000",
+      "cliente": "Sergio Universidad",
+      "cantidad": 1,
+      "valorPagado": 16000,
+      "valorVenta": 16000,
+      "valorTotal": 16000,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "#Compra",
+      "cliente": null,
+      "cantidad": 7,
+      "valorPagado": -55500,
+      "valorVenta": 7600,
+      "valorTotal": 53200,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "#Compra",
+      "cliente": null,
+      "cantidad": 1,
+      "valorPagado": -206500,
+      "valorVenta": 276500,
+      "valorTotal": 276500,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Vaper Lost Mary x5000",
+      "cliente": "Chonchi",
+      "cantidad": 2,
+      "valorPagado": 32000,
+      "valorVenta": 16000,
+      "valorTotal": 32000,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Vaper Snoopy",
+      "cliente": "Picoro",
+      "cantidad": 1,
+      "valorPagado": 25000,
+      "valorVenta": 25000,
+      "valorTotal": 25000,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Vaper Lost Mary x5000",
+      "cliente": "Jero",
+      "cantidad": 1,
+      "valorPagado": 16000,
+      "valorVenta": 16000,
+      "valorTotal": 16000,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Camiseta",
+      "cliente": "Nico",
+      "cantidad": 1,
+      "valorPagado": 40000,
+      "valorVenta": 40000,
+      "valorTotal": 40000,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Cueros Nicon",
+      "cliente": "Juan Sacatin",
+      "cantidad": 1,
+      "valorPagado": 4000,
+      "valorVenta": 4000,
+      "valorTotal": 4000,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Vaper Myntopia",
+      "cliente": "Loco",
+      "cantidad": 1,
+      "valorPagado": null,
+      "valorVenta": 25000,
+      "valorTotal": 25000,
+      "debe": 25000,
+      "comentarios": null
+    },
+    {
+      "producto": "#Compra",
+      "cliente": null,
+      "cantidad": 1,
+      "valorPagado": -201000,
+      "valorVenta": null,
+      "valorTotal": 0,
+      "debe": 0,
+      "comentarios": null
+    },
+    {
+      "producto": "Camiseta",
+      "cliente": "Alejo Solarte",
+      "cantidad": 3,
+      "valorPagado": 50000,
+      "valorVenta": 30000,
+      "valorTotal": 90000,
+      "debe": 40000,
+      "comentarios": null
+    },
+    {
+      "producto": "Camiseta",
+      "cliente": "Chonchi",
+      "cantidad": 3,
+      "valorPagado": 0,
+      "valorVenta": 30000,
+      "valorTotal": 90000,
+      "debe": 90000,
+      "comentarios": null
+    },
+    {
+      "producto": "Camiseta",
+      "cliente": "Chamo",
+      "cantidad": 1,
+      "valorPagado": 0,
+      "valorVenta": 40000,
+      "valorTotal": 40000,
+      "debe": 40000,
+      "comentarios": null
+    },
+    {
+      "producto": "Camiseta",
+      "cliente": "Diana Prima",
+      "cantidad": 1,
+      "valorPagado": 0,
+      "valorVenta": 40000,
+      "valorTotal": 40000,
+      "debe": 40000,
+      "comentarios": null
+    }
+  ],
+  "defectuosos": [
+    {
+      "compra": "Compra #5 ",
+      "producto": "Vaper REBEL PRO 5000PUFF ",
+      "cantidad": 1,
+      "valorUnitario": 13000,
+      "valorTotal": 13000
+    },
+    {
+      "compra": "Compra #2 ",
+      "producto": "Vaper Desechable Cheevape 6000PUFF ",
+      "cantidad": 1,
+      "valorUnitario": 25000,
+      "valorTotal": 25000
+    }
+  ]
+}

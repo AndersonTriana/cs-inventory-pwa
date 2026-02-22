@@ -1,0 +1,70 @@
+/* Responsive Tables - Mobile First */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: var(--radius-md);
+    background: var(--color-bg-glass);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--color-border-glass);
+    box-shadow: var(--shadow-card);
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    min-width: 500px;
+    /* Force scroll on very small screens */
+}
+
+.table th,
+.table td {
+    padding: var(--space-md);
+    border-bottom: 1px solid var(--color-border-glass-light);
+}
+
+.table th {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    background: rgba(0, 0, 0, 0.3);
+    letter-spacing: 0.05em;
+}
+
+.table tr:last-child td {
+    border-bottom: none;
+}
+
+.table tr:hover td {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Specific cell styles */
+.cell-currency {
+    font-family: monospace;
+    font-size: 1rem;
+}
+
+.cell-actions {
+    display: flex;
+    gap: var(--space-sm);
+}
+
+.btn-icon {
+    background: transparent;
+    border: none;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    padding: var(--space-xs);
+    transition: color var(--transition-fast);
+}
+
+.btn-icon:hover {
+    color: var(--color-accent-gold);
+}
+
+.btn-icon--danger:hover {
+    color: var(--color-accent-red);
+}

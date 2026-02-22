@@ -1,0 +1,102 @@
+/* Form controls */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: var(--space-md);
+}
+
+.form-label {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid var(--color-border-glass);
+    color: var(--color-text-main);
+    padding: 0.75rem var(--space-md);
+    border-radius: var(--radius-md);
+    outline: none;
+    transition: all var(--transition-fast);
+    width: 100%;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+    border-color: var(--color-accent-gold);
+    box-shadow: 0 0 8px rgba(212, 168, 67, 0.2);
+}
+
+.form-select option {
+    background: var(--color-bg-dark);
+    color: var(--color-text-main);
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.9rem;
+    gap: var(--space-sm);
+    width: 100%;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--color-accent-red), #8a1529);
+    color: #fff;
+    box-shadow: var(--glow-red);
+}
+
+.btn-primary:active {
+    background: linear-gradient(135deg, #a1142c, #6c1020);
+    transform: translateY(2px);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--color-accent-gold);
+    border: 1px solid var(--color-accent-gold);
+}
+
+.btn-outline:active {
+    background: rgba(212, 168, 67, 0.1);
+    transform: translateY(2px);
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--color-text-main);
+}
+
+/* Search bar specific */
+.search-bar {
+    position: relative;
+    margin-bottom: var(--space-lg);
+}
+
+.search-bar input {
+    padding-left: 2.5rem;
+    border-radius: 20px;
+}
+
+.search-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-text-muted);
+}

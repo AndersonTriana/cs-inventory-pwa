@@ -1,0 +1,59 @@
+body {
+    background-color: var(--color-bg-deep);
+    color: var(--color-text-main);
+    font-family: var(--font-family-body);
+    /* The SVG background pattern will go here */
+    position: relative;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+.font-title {
+    font-family: var(--font-family-title);
+    font-weight: normal;
+    letter-spacing: 0.05em;
+    color: var(--color-accent-gold);
+}
+
+/* Subtle background overlay to dim the pattern */
+.bg-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background-image: url('../../assets/images/tattoo-pattern.svg');
+    background-size: 300px;
+    background-repeat: repeat;
+    opacity: 0.05;
+    /* very subtle */
+    pointer-events: none;
+}
+
+.text-muted {
+    color: var(--color-text-muted);
+}
+
+.text-accent {
+    color: var(--color-accent-red);
+}
+
+.text-gold {
+    color: var(--color-accent-gold);
+}
+
+.text-success {
+    color: #4caf50;
+}
+
+.text-danger {
+    color: #f44336;
+}
+
+.text-warning {
+    color: #ffeb3b;
+}
